@@ -1,6 +1,6 @@
-public class simpleTask extends task{
+public class simpleTask extends task {
 
-    protected String title;
+    private String title;//private
 
     public simpleTask(int id, String title) {
         super(id); // вызов родительского конструктора
@@ -9,5 +9,13 @@ public class simpleTask extends task{
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public boolean matches(String query) {
+        if (title.contains(query)) {
+            return true;
+        }
+        return false;
     }
 }
