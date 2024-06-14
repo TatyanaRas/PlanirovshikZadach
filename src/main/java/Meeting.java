@@ -1,12 +1,12 @@
 import java.util.Arrays;
 
-public class meeting extends task {
+public class Meeting extends Task {
 
-    private String topic;
-    private String project;
-    private String start;
+    protected String topic;
+    protected String project;
+    protected String start;
 
-    public meeting(int id, String topic, String project, String start) {
+    public Meeting(int id, String topic, String project, String start) {
         super(id); // вызов родительского конструктора
         this.topic = topic;
         this.project = project;

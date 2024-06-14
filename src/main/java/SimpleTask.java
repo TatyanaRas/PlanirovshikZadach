@@ -1,8 +1,8 @@
-public class simpleTask extends task {
+public class SimpleTask extends Task {
 
-    private String title;//private
+    protected String title;//private
 
-    public simpleTask(int id, String title) {
+    public SimpleTask(int id, String title) {
         super(id); // вызов родительского конструктора
         this.title = title; // заполнение своих полей
     }

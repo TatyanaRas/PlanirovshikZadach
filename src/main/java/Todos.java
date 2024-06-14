@@ -1,6 +1,6 @@
-public class todos {
+public class Todos {
 
-    private task[] tasks = new task[0]; // <- тут будут все задачи
+    private Task[] tasks = new Task[0]; // <- тут будут все задачи
 
     /**
      * Вспомогательный метод для имитации добавления элемента в массив
@@ -10,8 +10,8 @@ public class todos {
      * @return Возвращает новый массив, который выглядит как тот, что мы передали,
      * но с добавлением нового элемента в конец
      */
-    private task[] addToArray(task[] current, task task) {
-        task[] tmp = new task[current.length + 1];
+    private Task[] addToArray(Task[] current, Task task) {
+        Task[] tmp = new Task[current.length + 1];
         for (int i = 0; i < current.length; i++) {
             tmp[i] = current[i];
         }
@@ -24,11 +24,11 @@ public class todos {
      *
      * @param task Добавляемая задача
      */
-    public void add(task task) { // <- вот здесь в параметре может лежать объект и вида SimpleTask, и вида Epic, и вида Meeting
+    public void add(Task task) { // <- вот здесь в параметре может лежать объект и вида SimpleTask, и вида Epic, и вида Meeting
         tasks = addToArray(tasks, task);
     }
 
-    public task[] findAll() {
+    public Task[] findAll() {
         return tasks;
     }
 
@@ -49,9 +49,9 @@ public class todos {
      * @param query Поисковый запрос
      * @return Массив из подошедших задач
      */
-    public task[] search(String query) {
-        task[] result = new task[0]; // массив для ответа
-        for (task task : tasks) { // перебираем все задачи
+    public Task[] search(String query) {
+        Task[] result = new Task[0]; // массив для ответа
+        for (Task task : tasks) { // перебираем все задачи
             if (task.matches(query)) { // если задача подходит под запрос
                 result = addToArray(result, task); // добавляем её в массив ответа
             }

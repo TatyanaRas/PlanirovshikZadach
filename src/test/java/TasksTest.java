@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Nested
-public class tasksTest {
+public class TasksTest {
 
     @Test
     public void searchEpic1() {
 
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
-        epic epic = new epic(55, subtasks);
+        Epic epic = new Epic(55, subtasks);
 
 
         boolean expected = true;
@@ -24,7 +24,7 @@ public class tasksTest {
     public void searchEpic2() {
 
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
-        epic epic = new epic(55, subtasks);
+        Epic epic = new Epic(55, subtasks);
 
 
         boolean expected = false;
@@ -36,7 +36,7 @@ public class tasksTest {
 
     @Test
     public void searchSimpleTask1() {
-        simpleTask simpleTask = new simpleTask(5, "Позвонить родителям");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
 
         boolean expected = true;
@@ -46,7 +46,7 @@ public class tasksTest {
 
     @Test
     public void searchSimpleTask2() {
-        simpleTask simpleTask = new simpleTask(5, "Позвонить родителям");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
 
         boolean expected = false;
@@ -59,7 +59,7 @@ public class tasksTest {
     public void searchMeeting1() {
 
 
-        meeting meeting = new meeting(
+        Meeting meeting = new Meeting(
                 555,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
@@ -77,7 +77,7 @@ public class tasksTest {
     public void searchMeeting2() {
 
 
-        meeting meeting = new meeting(
+        Meeting meeting = new Meeting(
                 555,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
@@ -96,7 +96,7 @@ public class tasksTest {
     public void searchMeeting3() {
 
 
-        meeting meeting = new meeting(
+        Meeting meeting = new Meeting(
                 555,
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",

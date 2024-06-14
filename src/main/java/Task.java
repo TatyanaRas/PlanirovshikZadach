@@ -1,7 +1,7 @@
 
 import java.util.Objects;
 
-public abstract class task {
+public  class Task {//abstract
 
     protected int id;
     protected String[] subtasks;
@@ -9,7 +9,7 @@ public abstract class task {
     protected String project;
     protected String start;
 
-    public task(int id) {
+    public Task(int id) {
         this.id = id;
     }
 
@@ -24,7 +24,7 @@ public abstract class task {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        task task = (task) o;
+        Task task = (Task) o;
         return id == task.id;
     }
 
